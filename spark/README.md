@@ -96,7 +96,8 @@ vim /opt/bit010/spark/conf/spark-env.sh
 Adding following configuration
 
 ```
-export SPARK_MASTER_HOST='10.0.2.100'
+export SPARK_LOCAL_IP=10.0.2.100
+export SPARK_MASTER_HOST=MASTER
 export JAVA_HOME=${JAVA_HOME}
 ```
 
@@ -146,6 +147,20 @@ Adding following configuration
 export SPARK_HOME=/opt/bit010/spark
 export PATH=$PATH:$SPARK_HOME/bin
 export PATH=$PATH:$SPARK_HOME/sbin
+```
+
+## Spark Slave01 Configuration
+
+```bash
+vim /opt/bit010/spark/conf/spark-env.sh
+```
+
+Change following configuration
+
+```
+export SPARK_LOCAL_IP=10.0.2.101
+export SPARK_MASTER_HOST=MASTER
+export JAVA_HOME=${JAVA_HOME}
 ```
 
 ## Start Spark Cluster
