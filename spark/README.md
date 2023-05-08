@@ -32,8 +32,8 @@ systemctl disable firewalld
 ```bash
 su - hadoop
 ssh-keygen
-ssh-copy-id root@master
-ssh-copy-id root@slave01
+ssh-copy-id hadoop@master
+ssh-copy-id hadoop@slave01
 ```
 
 * In Slave01
@@ -41,8 +41,8 @@ ssh-copy-id root@slave01
 ```bash
 su - hadoop
 ssh-keygen
-ssh-copy-id root@master
-ssh-copy-id root@slave01
+ssh-copy-id hadoop@master
+ssh-copy-id hadoop@slave01
 ```
 
 
