@@ -2,7 +2,7 @@
 
 ## Config Linux Cluster
 
-Master(10.0.2.100) and Slave01(10.0.2.101) use NAT network in VirtualBox to communicate with eachother
+Master(10.0.2.100) and Slave01(10.0.2.101) use NAT network in VirtualBox to communicate with each other
 
 In the hosts file of master and slave01
 
@@ -32,6 +32,7 @@ systemctl disable firewalld
 ```bash
 su - hadoop
 ssh-keygen
+ssh-copy-id root@master
 ssh-copy-id root@slave01
 ```
 
@@ -41,6 +42,7 @@ ssh-copy-id root@slave01
 su - hadoop
 ssh-keygen
 ssh-copy-id root@master
+ssh-copy-id root@slave01
 ```
 
 
